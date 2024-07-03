@@ -6,7 +6,7 @@ Welcome to the README section. This repository contains a comprehensive overview
 
 ## Course Content
 
-This course, titled **"Fundamentals of Mathematical and Computer Modeling of Natural Physical Processes"**,  is offered by KBTU University and primarily focuses on solving various types of equations, including:
+This course, titled **"Fundamentals of Mathematical and Computer Modeling of Natural Physical Processes"**,  is offered by Kazakh-British Technical University (KBTU) and primarily focuses on solving various types of equations, including:
 
 - **1D, 2D, and 3D Heat Equations**
 - **1D, 2D, and 3D Laplace Equations**
