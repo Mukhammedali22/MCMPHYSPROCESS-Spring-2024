@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Welcome to the README section. This repository contains a comprehensive overview of equations, ranging from simple one-dimensional Heat, Poisson, Laplace and Transport equations to more complex two-dimensional and three-dimensional Navier-Stokes equations.
+Welcome to the README section. This repository contains a comprehensive overview of differential equations, ranging from simple one-dimensional Heat, Poisson, Laplace and Transport equations to more complex two-dimensional and three-dimensional Navier-Stokes equations.
 
 ## Course Content
 
