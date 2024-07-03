@@ -29,11 +29,14 @@ In addition, it also covers several explicit methods:
 - **Gauss-Seidel Method**
 - **Upper Relaxation Method**
 
-To solve the Navier-Stokes equation, the method of splitting by physical parameters has been utilized.
+To solve the Navier-Stokes equation, the projection method has been used.
 
 ## Programming Languages
 
 The implementations are done using **Python** and **C++**.
+
+## Visualizations
+Visualizations are created using the Python matplotlib library or the Tecplot post-processing tool for CFD.
 
 ## Purpose
 
