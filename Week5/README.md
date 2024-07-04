@@ -8,7 +8,7 @@ This method approximates the 1D transport equation with an error order of \( O(\
 
 The 1D transport equation is given by:
 
-### \[ \frac{\partial u}{\partial t} + c \frac{\partial u}{\partial x} = 0, \quad x \in [0, 3], \quad t > 0 \]
+### \frac{\partial u}{\partial t} + c \frac{\partial u}{\partial x} = 0, \quad x \in [0, 3], \quad t > 0
 
 where \( \frac{\partial u}{\partial t} \) and \( \frac{\partial u}{\partial x} \) represent the partial derivatives of \( u \) with respect to time \( t \) and space \( x \), respectively.
 
@@ -16,11 +16,11 @@ where \( \frac{\partial u}{\partial t} \) and \( \frac{\partial u}{\partial x} \
 
 ##### For \( c > 0 \) (Backward Scheme)
 
-### \[ \frac{U_i^{n+1} - U_i^n}{\Delta t} = -c \frac{U_i^n - U_{i-1}^n}{\Delta x} \]
+### \frac{U_i^{n+1} - U_i^n}{\Delta t} = -c \frac{U_i^n - U_{i-1}^n}{\Delta x}
 
 ##### For \( c < 0 \) (Forward Scheme)
 
-### \[ \frac{U_i^{n+1} - U_i^n}{\Delta t} = -c \frac{U_{i+1}^n - U_i^n}{\Delta x} \]
+### \frac{U_i^{n+1} - U_i^n}{\Delta t} = -c \frac{U_{i+1}^n - U_i^n}{\Delta x}
 
 #### Stability Condition
 
