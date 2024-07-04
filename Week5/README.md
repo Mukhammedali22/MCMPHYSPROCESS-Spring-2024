@@ -1,4 +1,4 @@
-## 1D Transport Equation
+## The one-dimensional Transport equation
 
 ### The First Scheme Against the Flow Method
 
