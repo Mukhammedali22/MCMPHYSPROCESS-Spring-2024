@@ -9,7 +9,9 @@ This method approximates the 1D transport equation with an error order of \( O(\
 The 1D transport equation is given by:
 
 ### \frac{\partial u}{\partial t} + c \frac{\partial u}{\partial x} = 0, \quad x \in [0, 3], \quad t > 0
-### https://latex.codecogs.com/svg.image?\frac{\partial&space;u}{\partial&space;t}&plus;c\frac{\partial&space;u}{\partial&space;x}=0,\quad&space;x\in[0,3],\quad&space;t>0&space;
+<p align="center">
+<a href="[https://www.codecogs.com/eqnedit.php?latex=\dpi{150}&space;\bg_white&space;\frac{\partial&space;T}{\partial&space;t}&space;=&space;D\frac{\partial^2&space;T}{\partial&space;x^2}](https://latex.codecogs.com/svg.image?\frac{\partial&space;u}{\partial&space;t}&plus;c\frac{\partial&space;u}{\partial&space;x}=0,\quad&space;x\in[0,3],\quad&space;t>0&space;)" target="_blank"><img src="[https://latex.codecogs.com/png.latex?\dpi{150}&space;\bg_white&space;\frac{\partial&space;T}{\partial&space;t}&space;=&space;D\frac{\partial^2&space;T}{\partial&space;x^2](https://latex.codecogs.com/svg.image?\frac{\partial&space;u}{\partial&space;t}&plus;c\frac{\partial&space;u}{\partial&space;x}=0,\quad&space;x\in[0,3],\quad&space;t>0&space;)" title="\frac{\partial T}{\partial t} = D\frac{\partial^2 T}{\partial x^2}" /></a>
+</p>
 where \( \frac{\partial u}{\partial t} \) and \( \frac{\partial u}{\partial x} \) represent the partial derivatives of \( u \) with respect to time \( t \) and space \( x \), respectively.
 
 #### Schemes
