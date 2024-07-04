@@ -32,7 +32,7 @@ dt = dx / abs(c)
 eps = 1e-6
 stop_iteration = 10000
 
-start_x, end_x = (0, pi)
+start_x, end_x = (0, 3)
 N = int((end_x - start_x) / dx) + 1
 x = start_x + np.arange(start=0, stop=N) * dx
 
