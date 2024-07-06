@@ -5,7 +5,7 @@ using namespace std::chrono;
 
 
 // 2D Laplace equation
-// Jacobi method
+// Gauss-Seidel method
 // Problem 2
 
 // Boundary conditions
