@@ -69,10 +69,13 @@ void savetxt(std::string path, double arr[M][N],
     std::string fmtwd = fmt + "%c";
     for(int j = 0; j < M; ++j){
         for(int i = 0; i < N; ++i){
-            if(i == N-1){
+            if(i != N-1){
                 printf(fmt.c_str(), arr[j][i]);
+                if(i != N-2){
+                    printf("%c", delimeter);
+                }
             }else{
-                printf(fmtwd.c_str(), arr[j][i], delimeter);
+                printf("\n");
             }
         }
     }
