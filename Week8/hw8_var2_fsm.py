@@ -214,15 +214,7 @@ def Numba_Fractional_step_method(U:np.ndarray, N, M, dx, dy, dt,
     print("Maximum absolute difference:", maximum)
 
     return U_new
-
-# def set_boundary_U(U:np.ndarray):
-#     U[0:M2, 0] = 0
-#     U[M2:M, 0] = 1
-#     U[0:M1, N-1] = 1
-#     U[M1:M, N-1] = 0
-#     U[0, 0:N] = 0
-#     U[M-1, 0:N] = 0  
-
+ 
 def plot_result(X, Y, P, name="Numerical method"):
     plt.title(name)
     plt.xlabel("x")
