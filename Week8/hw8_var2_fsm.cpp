@@ -128,14 +128,14 @@ void Fractional_step_method(double U_old[M][N], double U_new[M][N], int N, int M
 
         // Thomas algorithm for x
         // U(t, x=0, 0<y<0.7) = 0
-        for(int j = M2; j < M; ++j){
-            alpha[j][1] = 0;
-            beta[j][1] = 1;
-        }
-        // U(t, x=0, 0.7<y<1) = 1
         for(int j = 0; j < M2; ++j){
             alpha[j][1] = 0;
             beta[j][1] = 0;
+        }
+        // U(t, x=0, 0.7<y<1) = 1
+        for(int j = M2; j < M; ++j){
+            alpha[j][1] = 0;
+            beta[j][1] = 1;
         }
 
         for(int j = 1; j < M-1; ++j){
