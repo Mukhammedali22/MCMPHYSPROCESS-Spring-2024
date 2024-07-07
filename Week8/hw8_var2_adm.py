@@ -56,13 +56,11 @@ def Alternating_direction_method(U:np.ndarray, N, M, dx, dy, dt,
     maximum = 1
     while maximum > eps and iteration < stop_iteration:
         # Finding U^(n+1/2)
-        A[0:M, 0:N] = -a2 / (2*dx**2)
-        B[0:M, 0:N] = 1 / dt + a2 / dx**2
-        C[0:M, 0:N] = -a2 / (2*dx**2)
+        A[0:M, 0:N] = -a2 / dx**2
+        B[0:M, 0:N] = 1 / dt + 2*a2 / dx**2
+        C[0:M, 0:N] = -a2 / dx**2
         
         D[1:M-1, 1:N-1] = U_old[1:M-1, 1:N-1] / dt \
-            + a2*(U_old[1:M-1, 2:N] - 2*U_old[1:M-1, 1:N-1] + U_old[1:M-1, 0:N-2]) \
-                / (2*dx**2) \
             + a2*(U_old[2:M, 1:N-1] - 2*U_old[1:M-1, 1:N-1] + U_old[0:M-2, 1:N-1]) \
                 / dy**2
         
@@ -89,13 +87,13 @@ def Alternating_direction_method(U:np.ndarray, N, M, dx, dy, dt,
             U_new[1:M-1, i] = alpha[1:M-1, i+1]*U_new[1:M-1, i+1] + beta[1:M-1, i+1]   
         
         # Finding U^(n+1)
-        A[0:M, 0:N] = -a2 / (2*dy**2)
-        B[0:M, 0:N] = 1 / dt + a2 / dy**2
-        C[0:M, 0:N] = -a2 / (2*dy**2)
+        A[0:M, 0:N] = -a2 / dy**2
+        B[0:M, 0:N] = 1 / dt + 2*a2 / dy**2
+        C[0:M, 0:N] = -a2 / dy**2
         
         D[1:M-1, 1:N-1] = U_new[1:M-1, 1:N-1] / dt \
-            - a2*(U_old[2:M, 1:N-1] - 2*U_old[1:M-1, 1:N-1] + U_old[0:M-2, 1:N-1]) \
-                / (2*dy**2)
+            + a2*(U_new[1:M-1, 2:N] - 2*U_new[1:M-1, 1:N-1] + U_new[1:M-1, 0:N-2]) \
+                / dx**2
             
         # Thomas algorithm for y
         # U(t, x, y=0) = 0
@@ -118,7 +116,7 @@ def Alternating_direction_method(U:np.ndarray, N, M, dx, dy, dt,
         # print("Iteration", iteration, "\t", "maximum", maximum)
         U_old = U_new.copy()
         iteration += 1
-
+        
     print("Number of iterations:", iteration)
     print("Maximum absolute difference:", maximum)
 
