@@ -1,4 +1,4 @@
-Hello! I am strongly recommend to you look through uploaded here the PDF file. There is explanation of numerical method which I used for 2D Burger's equation. Thank you!
+Hello! I am strongly recommend you to look through uploaded here the PDF file. There is explanation of numerical method which I used for 2D Burger's equation. Thank you!
 
 Solution:
 
