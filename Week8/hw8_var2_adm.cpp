@@ -148,11 +148,11 @@ void Alternating_direction_method(double U_old[M][N], double U_new[M][N], int N,
         for(int j = 1; j < M-1; ++j){
             // U^(n+1/2)
             // U(t, x=1, 0<y<0.3) = 1
-            for(int j = 0; j < M1; ++j){
+            if(j < M1){
                 U_new[j][N-1] = 1;
             }
             // U(t, x=1, 0.3<y<1) = 0
-            for(int j = M1; j < M2; ++j){
+            else if(j >= M1 and j < M){
                 U_new[j][N-1] = 0;
             }
             for(int i = N-2; i >= 0; --i){
@@ -197,9 +197,7 @@ void Alternating_direction_method(double U_old[M][N], double U_new[M][N], int N,
         for(int i = 1; i < N-1; ++i){
             // U^(n+1)
             // U(t, x, y=1) = 0
-            for(int i = 0; i < N; ++i){
-                U_new[M-1][i] = 0;
-            }
+            U_new[M-1][i] = 0;
             for(int j = M-2; j >= 0; --j){
                 U_new[j][i] = alpha[j+1][i]*U_new[j+1][i] 
                                 + beta[j+1][i];
