@@ -490,6 +490,16 @@ np.savetxt(f"{path}\\HW11_Y_py.txt", Y, fmt="%.6f", delimiter="\t")
 np.savetxt(f"{path}\\HW11_U_py.txt", U_1, fmt="%.6f", delimiter="\t")
 np.savetxt(f"{path}\\HW11_V_py.txt", V_1, fmt="%.6f", delimiter="\t")
 
+with open(f"{path}\\HW11_py.dat", "w") as file:
+    file.write(f"VARIABLES = \"X\", \"Y\", \"Z\", \"U\", \"V\"\n")
+    file.write(f"ZONE I = {N}, J = {M}")
+    
+    for j in range(M):
+        for i in range(N):
+            file.write(f"{x[i]}\t{y[j]}\t{U_1[j, i]}\t{V_1[j, i]}\n")
+
+    print("Results are recorded")
+
 plot_result(X, Y, (U_1**2 + V_1**2)**0.5, lvl=20, name="Fractional step method")
 plot_result(X, Y, U_1, lvl=20, name="Fractional step method")
 plot_result(X, Y, V_1, lvl=20, name="Fractional step method")
