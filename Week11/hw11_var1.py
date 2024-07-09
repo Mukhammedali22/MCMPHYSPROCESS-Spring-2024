@@ -490,9 +490,10 @@ np.savetxt(f"{path}\\HW11_Y_py.txt", Y, fmt="%.6f", delimiter="\t")
 np.savetxt(f"{path}\\HW11_U_py.txt", U_1, fmt="%.6f", delimiter="\t")
 np.savetxt(f"{path}\\HW11_V_py.txt", V_1, fmt="%.6f", delimiter="\t")
 
+# Saving data to the Tecplot program
 with open(f"{path}\\HW11_py.dat", "w") as file:
-    file.write(f"VARIABLES = \"X\", \"Y\", \"Z\", \"U\", \"V\"\n")
-    file.write(f"ZONE I = {N}, J = {M}")
+    file.write(f"VARIABLES = \"X\", \"Y\", \"U\", \"V\"\n")
+    file.write(f"ZONE I = {N}, J = {M}\n")
     
     for j in range(M):
         for i in range(N):
