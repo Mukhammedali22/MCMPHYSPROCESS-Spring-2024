@@ -66,7 +66,7 @@ def Explicit_Burger(S:np.ndarray, U:np.ndarray, V:np.ndarray, N, M, dx, dy, dt, 
     
     return S_new
 
-def Jacobi_method(P:np.ndarray, U:np.ndarray, V:np.ndarray, N, M, dx, dy, rho) -> np.ndarray:
+def Jacobi_method(P:np.ndarray, U:np.ndarray, V:np.ndarray, N, M, dx, dy, dt, rho) -> np.ndarray:
     """Jacobi method for solving 2D Poisson equation"""
     # Reference
     P_old = P
@@ -190,7 +190,7 @@ while maximum > eps and iteration < stop_iteration:
     iteration_P = 0
     maximum_P = 1
     while maximum_P > eps_P and iteration_P < stop_iteration_P:
-        P_new = Jacobi_method(P_old, U_new, V_new, N, M, dx, dy, rho)
+        P_new = Jacobi_method(P_old, U_new, V_new, N, M, dx, dy, dt, rho)
         set_boundary_P(P=P_new)
 
         maximum_P = np.max(np.abs(P_new - P_old))
