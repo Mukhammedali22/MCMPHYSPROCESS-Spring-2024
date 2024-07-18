@@ -38,6 +38,8 @@ The implementations are done using **Python** and **C++**.
 ## Visualizations
 Visualizations are created using the Python matplotlib library or the Tecplot post-processing tool for CFD.
 
+![](https://github.com/Mukhammedali22/MCMPHYSPROCESS-Spring-2024/blob/main/Week13/HW13.gif)
+
 ## Purpose
 
 The aim of this repository is to provide an introduction to the field of computational fluid dynamics. I hope you find this resource useful.
