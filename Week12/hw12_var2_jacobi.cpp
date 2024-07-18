@@ -4,8 +4,9 @@
 using namespace std::chrono;
 
 
-// 2D Burger's equation
-// Fractional step method (FSM)
+// 2D Navier-Stokes equation
+// Projection method
+// Explicit + Jacobi
 // Problem 1
 
 // Initial condition
