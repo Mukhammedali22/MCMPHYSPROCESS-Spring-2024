@@ -356,24 +356,24 @@ int main(){
     std::cout << "eps = " << eps << std::endl;
     std::cout << "Maximum = " << maximum << std::endl;
 
+    FILE *File;
+    File = freopen("Results\\HW13_cpp.dat", "w", stdout);
+    std::cout << "VARIABLES = \"X\", \"Y\", \"U\", \"V\", \"P\"" << std::endl;
+    std::cout << "ZONE I = " << N << ", J = " << M << std::endl;
+
+    for(int j = 0; j < M; ++j){
+        for(int i = 0; i < N; ++i){
+            std::cout << X[j][i] << "\t" << Y[j][i] << "\t" << U_new[j][i] 
+                << "\t" << V_new[j][i] << "\t" << P_new[j][i] << std::endl;
+        }
+    }
+    fclose(File);
+    
     savetxt("Results\\HW12_X_cpp.txt", X, "%.6f", '\t');
     savetxt("Results\\HW12_Y_cpp.txt", Y, "%.6f", '\t');
     savetxt("Results\\HW12_U_cpp.txt", U_new, "%.6f", '\t');
     savetxt("Results\\HW12_V_cpp.txt", V_new, "%.6f", '\t');
     savetxt("Results\\HW12_P_cpp.txt", P_new, "%.6f", '\t');
     
-    std::cout << "Results are recorded" << std::endl;
-
-    freopen("Results\\HW12_cpp.dat", "w", stdout);
-    std::cout << "VARIABLES = \"X\", \"Y\", \"U\", \"V\", \"P\"" << std::endl;
-    std::cout << "ZONE I = " << N << ", J = " << M << std::endl;
-
-    for(int j = 0; j < M; ++j){
-        for(int i = 0; i < N; ++i){
-            std::cout << X[i] << "\t" << Y[j] << "\t" << U_new[j][i] 
-                << "\t" << V_new[j][i] << "\t" << P_new[j][i] << std::endl;
-        }
-    }
-
     return 0;
 }
