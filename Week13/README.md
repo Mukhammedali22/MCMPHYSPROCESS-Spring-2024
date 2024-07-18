@@ -1,3 +1,6 @@
+Solution:
+
+![](https://github.com/Mukhammedali22/MCMPHYSPROCESS-Spring-2024/blob/main/Week13/U.png)
 
 Gif animations:
 
