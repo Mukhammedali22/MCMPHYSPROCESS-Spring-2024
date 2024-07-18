@@ -260,7 +260,7 @@ void FSM_Burger(double S_new[M][N], double S_old[M][N], double U_old[M][N], doub
 }
 
 void Gauss_Seidel_Poisson(double P_new[M][N], double P_old[M][N], double U_new[M][N], double V_new[M][N], 
-                      int N, int M, double dx, double dy, double dt, double rho, double w=1.5){
+                      int N, int M, double dx, double dy, double dt, double rho){
     for(int j = 1; j < M-1; ++j){
         for(int i = 1; i < N-1; ++i){
             // central scheme
