@@ -412,7 +412,7 @@ int main(){
         iteration_P = 0;
         maximum_P = 0;
         do{
-            Gauss_Seidel_Poisson(P_new, P_old, U_new, V_new, N, M, dx, dy, dt, rho, 1.94);
+            Gauss_Seidel_Poisson(P_new, P_old, U_new, V_new, N, M, dx, dy, dt, rho);
 
             set_boundary_P(P_new);            
             maximum_P = max_abs_diff(P_new, P_old);
