@@ -75,10 +75,10 @@ def Fractional_step_method(U:np.ndarray, N, M, dx, dy, dt,
         beta[M2:M, 1] = 1
         
         for i in range(1, N-1):
-            alpha[1:M-1, i+1] = -A[1:N-1, i] \
-                / (B[1:M-1, i] + C[1:N-1, i]*alpha[1:N-1, i])
-            beta[1:M-1, i+1] = (D[1:M-1, i] - C[1:N-1, i]*beta[1:M-1, i]) \
-                / (B[1:M-1, i] + C[1:N-1, i]*alpha[1:N-1, i])
+            alpha[1:M-1, i+1] = -A[1:M-1, i] \
+                / (B[1:M-1, i] + C[1:M-1, i]*alpha[1:M-1, i])
+            beta[1:M-1, i+1] = (D[1:M-1, i] - C[1:M-1, i]*beta[1:M-1, i]) \
+                / (B[1:M-1, i] + C[1:M-1, i]*alpha[1:M-1, i])
             
         # U^(n+1/2)
         # U(t, x=1, 0<y<0.3) = 1
@@ -166,10 +166,10 @@ def Numba_Fractional_step_method(U:np.ndarray, N, M, dx, dy, dt,
         beta[M2:M, 1] = 1
         
         for i in range(1, N-1):
-            alpha[1:M-1, i+1] = -A[1:N-1, i] \
-                / (B[1:M-1, i] + C[1:N-1, i]*alpha[1:N-1, i])
-            beta[1:M-1, i+1] = (D[1:M-1, i] - C[1:N-1, i]*beta[1:M-1, i]) \
-                / (B[1:M-1, i] + C[1:N-1, i]*alpha[1:N-1, i])
+            alpha[1:M-1, i+1] = -A[1:M-1, i] \
+                / (B[1:M-1, i] + C[1:M-1, i]*alpha[1:M-1, i])
+            beta[1:M-1, i+1] = (D[1:M-1, i] - C[1:M-1, i]*beta[1:M-1, i]) \
+                / (B[1:M-1, i] + C[1:M-1, i]*alpha[1:M-1, i])
             
         # U^(n+1/2)
         # U(t, x=1, 0<y<0.3) = 1
